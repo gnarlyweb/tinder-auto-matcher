@@ -1,53 +1,288 @@
+github.com /verdie-g/tinder-auto-matcherverdie-g/tinder-auto-matcher
 
-<body data-images="true" data-mode="solarized-dark" data-font="sans-serif" data-loaded="true" style="">
 
-  <a id="reader-domain" href="https://gnarlyweb.github.io/tinder-auto-matcher/">
-    <span>gnarlyweb.github.io</span>
-    
-    <span>/tinder-auto-matcher/</span>
-    
-  </a>
-  <h1 dir="auto" id="reader-title">Tinder Auto-Matcher</h1>
-  <div dir="auto" id="reader-credits"></div>
-  <div dir="auto" id="reader-estimated-time">2-2 minutes</div>
-  <hr>
-  <div id="readability-page-1" class="page"><div>
-        
+2-2 minutes
 
-<p><img src="https://user-images.githubusercontent.com/9092290/68415516-d6463600-0192-11ea-9820-ba391e4582f3.png"></p>
+Overview
 
-<h2 id="overview">Overview</h2>
-<p>The goal of Tinder Auto-Matcher is to dehumanize as much as it can social interactions. This is achieved by automatically
-liking back people who liked you Tinder to create a match without having to swipe one second. The next step would be to
-send you an email everyday with recapitulation of today’s matches.</p>
+“ The goal of Tinder Auto-Matcher is to dehumanize as much as it can social interactions. This is achieved by automatically liking back people who liked you Tinder to create a match without having to swipe one second. The next step would be to send you an email everyday with recapitulation of today’s matches. “
 
-<h2 id="usage">Usage</h2>
-<ul>
-  <li>First you need your Tinder’s authentication token. Log in to <a href="https://tinder.com/">tinder.com</a>, open the developer console, type <code data-beeline-skip="true">localStorage.getItem("TinderWeb/APIToken")</code> and save the returned value.</li>
-  <li>Write the <em>X-Auth-Token</em> value in the token key in Tinder.AutoMatcher/appsettings.json.</li>
-  <li>Install <a href="https://dotnet.microsoft.com/download">.NET Core SDK 3.X</a>.</li>
-  <li>Finally, <code data-beeline-skip="true">dotnet run -p Tinder.AutoMatcher</code> to launch the worker.</li>
-</ul>
+Lets head to terminal or we can use 
 
-<h2 id="how-does-it-work">How does it work?</h2>
-<p>Tinder has a section where one can see the blurred pictures of the people who liked you.
-To see the real profiles, you have to get Tinder Gold.</p>
-<p><img src="https://user-images.githubusercontent.com/9092290/68415518-d6463600-0192-11ea-8c1e-be4a3e32d021.jpg"></p>
+ GItpod.io/#https://github.com/gnarlyweb/tinder-auto-matcher
 
-<p>However the Tinder API send unblurred pictures and the blurring is computed on the client side.
-Thereby, you can see the real pictures just by disabling some CSS rules. These pictures are in very low definition though.</p>
-<p><img src="https://user-images.githubusercontent.com/9092290/68415517-d6463600-0192-11ea-8606-0e61ac9a6320.jpg"></p>
+Usage
 
-<p>This project works by saving the ids of the “blurred” images and then finds them in your recommendations feed.</p>
+“First you need your Tinder’s authentication token. Log in to tinder.com, open the developer console, type localStorage.getItem(“TinderWeb/APIToken”) and save the returned value.
 
-<h2 id="faq">F.A.Q</h2>
-<p><strong>Q:</strong> I didn’t get any match even tough Tinder tells me that I got X+ likes!?</p>
+Write the X-Auth-Token value in the token key in Tinder.AutoMatcher/appsettings.json.
 
-<p><strong>A:</strong> Several reasons could explain that:</p>
-<ul>
-  <li>These users are now out of range</li>
-  <li>They are not in your elo anymore</li>
-  <li>You swiped them left when you were swiping like a muggle</li>
-  <li>Recommendations are sometimes really random so the program works better in the long run. Don’t except to match everyone on the first try</li>
-</ul>
+Install .NET Core SDK 3.X.
+
+Finally, dotnet run -p Tinder.AutoMatcher to launch the worker.”
+
+Lets head to terminal or we can use GItpod.io#gt
+
+Git clone https://github.com/gnarlyweb/tinder-auto-matcher
+
+cd Tinder.AutoMatcher
+
+Then you will need to login to https://tinder.com/
+
+Once you have logged in you will open developer tools by entering your customization tab (Three dots top right in Chrome that is) next head down to more tools & choose developer tools or use the shortcut and press
+
+###
+
+CTRL + SHIFT + I
+
+# # #
+
+info for cookie
+
+#########
+
+nano appsettings.json
+
+sudo apt-get install dotnet-sdk-3.1
+
+###########
+
+If you have issues try this:
+
+sudo apt-get update
+
+sudo apt-get install apt-transport-https
+
+sudo apt-get update
+
+sudo dpkg -i packages-microsoft-prod.deb
+
+sudo dpkg –purge packages-microsoft-prod && sudo dpkg -i packages-microsoft-prod.deb
+
+sudo apt-get install {the .NET Core package}
+
+#
+
+Do you want to continue? [Y/n] Y
+
+#
+
+sudo apt-get update
+
+sudo apt-get install dotnet-sdk-3.1
+
+dotnet run -p Tinder.AutoMatcher
+
+Ls
+
+cd ..
+
+dotnet run -p Tinder.AutoMatcher
+
+########
+
+How does it work?
+Tinder has a section where one can see the blurred pictures of the people who liked you. To see the real profiles, you have to get Tinder Gold.
+
+
+However the Tinder API send unblurred pictures and the blurring is computed on the client side. Thereby, you can see the real pictures just by disabling some CSS rules. These pictures are in very low definition though.
+
+
+This project works by saving the ids of the “blurred” images and then finds them in your recommendations feed.
+
+F.A.Q
+Q: I didn’t get any match even tough Tinder tells me that I got X+ likes!?
+
+A: Several reasons could explain that:
+
+These users are now out of range
+They are not in your elo anymore
+You swiped them left when you were swiping like a muggle
+Recommendations are sometimes really random so the program works better in the long run. Don’t except to match everyone on the first try
+Q: Son, how did you meet your girlfriend?
+
+#
+
+Heres my results
+
+#
+
+info: Microsoft.Hosting.Lifetime[0]
+
+      Application started. Press Ctrl+C to shut down.
+
+info: Microsoft.Hosting.Lifetime[0]
+
+      Hosting environment: Development
+
+info: Microsoft.Hosting.Lifetime[0]
+
+      Content root path: /home/ec2-user/tinder-auto-matcher/Tinder.AutoMatcher
+
+dbug: Tinder.AutoMatcher.Worker[0]
+
+      9 people liked you
+
+info: Tinder.AutoMatcher.Worker[0]
+
+      You matched Cass
+
+info: Tinder.AutoMatcher.Worker[0]
+
+      You matched Denise
+
+info: Tinder.AutoMatcher.Worker[0]
+
+      You matched Ivonne
+
+info: Tinder.AutoMatcher.Worker[0]
+
+      You matched Jennifer
+
+dbug: Tinder.AutoMatcher.Worker[0]
+
+      No more teased recommendations found. Pausing for 2 hours
+
+
+2-2 minutes
+
+Overview
+
+“ The goal of Tinder Auto-Matcher is to dehumanize as much as it can social interactions. This is achieved by automatically liking back people who liked you Tinder to create a match without having to swipe one second. The next step would be to send you an email everyday with recapitulation of today’s matches. “
+
+Lets head to terminal or we can use 
+
+ GItpod.io/#https://github.com/gnarlyweb/tinder-auto-matcher
+
+Usage
+
+“First you need your Tinder’s authentication token. Log in to tinder.com, open the developer console, type localStorage.getItem(“TinderWeb/APIToken”) and save the returned value.
+
+Write the X-Auth-Token value in the token key in Tinder.AutoMatcher/appsettings.json.
+
+Install .NET Core SDK 3.X.
+
+Finally, dotnet run -p Tinder.AutoMatcher to launch the worker.”
+
+Lets head to terminal or we can use GItpod.io#gt
+
+Git clone https://github.com/gnarlyweb/tinder-auto-matcher
+
+cd Tinder.AutoMatcher
+
+Then you will need to login to https://tinder.com/
+
+Once you have logged in you will open developer tools by entering your customization tab (Three dots top right in Chrome that is) next head down to more tools & choose developer tools or use the shortcut and press
+
+###
+
+CTRL + SHIFT + I
+
+# # #
+
+info for cookie
+
+#########
+
+nano appsettings.json
+
+sudo apt-get install dotnet-sdk-3.1
+
+###########
+
+If you have issues try this:
+
+sudo apt-get update
+
+sudo apt-get install apt-transport-https
+
+sudo apt-get update
+
+sudo dpkg -i packages-microsoft-prod.deb
+
+sudo dpkg –purge packages-microsoft-prod && sudo dpkg -i packages-microsoft-prod.deb
+
+sudo apt-get install {the .NET Core package}
+
+#
+
+Do you want to continue? [Y/n] Y
+
+#
+
+sudo apt-get update
+
+sudo apt-get install dotnet-sdk-3.1
+
+dotnet run -p Tinder.AutoMatcher
+
+Ls
+
+cd ..
+
+dotnet run -p Tinder.AutoMatcher
+
+########
+
+How does it work?
+Tinder has a section where one can see the blurred pictures of the people who liked you. To see the real profiles, you have to get Tinder Gold.
+
+
+However the Tinder API send unblurred pictures and the blurring is computed on the client side. Thereby, you can see the real pictures just by disabling some CSS rules. These pictures are in very low definition though.
+
+
+This project works by saving the ids of the “blurred” images and then finds them in your recommendations feed.
+
+F.A.Q
+Q: I didn’t get any match even tough Tinder tells me that I got X+ likes!?
+
+A: Several reasons could explain that:
+
+These users are now out of range
+They are not in your elo anymore
+You swiped them left when you were swiping like a muggle
+Recommendations are sometimes really random so the program works better in the long run. Don’t except to match everyone on the first try
+Q: Son, how did you meet your girlfriend?
+
+#
+
+Heres my results
+
+#
+
+info: Microsoft.Hosting.Lifetime[0]
+
+      Application started. Press Ctrl+C to shut down.
+
+info: Microsoft.Hosting.Lifetime[0]
+
+      Hosting environment: Development
+
+info: Microsoft.Hosting.Lifetime[0]
+
+      Content root path: /home/ec2-user/tinder-auto-matcher/Tinder.AutoMatcher
+
+dbug: Tinder.AutoMatcher.Worker[0]
+
+      9 people liked you
+
+info: Tinder.AutoMatcher.Worker[0]
+
+      You matched Cass
+
+info: Tinder.AutoMatcher.Worker[0]
+
+      You matched Denise
+
+info: Tinder.AutoMatcher.Worker[0]
+
+      You matched Ivonne
+
+info: Tinder.AutoMatcher.Worker[0]
+
+      You matched Jennifer
+
+dbug: Tinder.AutoMatcher.Worker[0]
+
+      No more teased recommendations found. Pausing for 2 hours
 
